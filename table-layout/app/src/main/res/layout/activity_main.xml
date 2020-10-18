@@ -8,9 +8,7 @@
     <TableLayout
         android:layout_weight="2"
         android:weightSum="3">
-
         <TableRow>
-
             <TextView
                 android:id="@+id/edbieuhuc"
                 android:layout_height="match_parent"
@@ -21,9 +19,7 @@
                 android:textSize="30dp"
                 android:textStyle="bold" />
         </TableRow>
-
         <TableRow>
-
             <TextView
                 android:id="@+id/edketqua"
                 android:layout_height="match_parent"
@@ -47,6 +43,7 @@
             android:layout_weight="2"
             android:background="#BFCED1"
             android:text="MC"
+            android:textAllCaps="false"
             android:textColor="#817676"
             android:textSize="20dp" />
 
@@ -56,6 +53,7 @@
             android:layout_weight="2"
             android:background="#BFCED1"
             android:text="MR"
+            android:textAllCaps="false"
             android:textColor="#817676"
             android:textSize="20dp" />
 
@@ -64,6 +62,7 @@
             android:layout_height="match_parent"
             android:layout_weight="2"
             android:background="#BFCED1"
+            android:textAllCaps="false"
             android:text="M+"
             android:textColor="#000000"
             android:textSize="20dp" />
@@ -74,6 +73,7 @@
             android:layout_weight="2"
             android:background="#BFCED1"
             android:text="M-"
+            android:textAllCaps="false"
             android:textColor="#000000"
             android:textSize="20dp" />
 
@@ -83,6 +83,7 @@
             android:layout_weight="2"
             android:background="#BFCED1"
             android:text="MS"
+            android:textAllCaps="false"
             android:textColor="#000000"
             android:textSize="20dp" />
 
@@ -96,7 +97,8 @@
             android:layout_weight="2"
             android:textSize="20dp"
             android:layout_margin="2dp"
-            android:background="@color/Xam"
+            android:onClick="test"
+            android:background="@drawable/phimchucnang"
             android:layout_height="match_parent"
             android:text="%"/>
 
@@ -104,8 +106,9 @@
             android:id="@+id/btce"
             android:layout_weight="2"
             android:text="CE"
+            android:onClick="test"
             android:layout_margin="2dp"
-            android:background="@color/Xam"
+            android:background="@drawable/phimchucnang"
             android:layout_height="match_parent"
             android:textSize="20dp" />
         <Button
@@ -113,7 +116,7 @@
             android:layout_weight="2"
             android:textSize="20dp"
             android:layout_margin="2dp"
-            android:background="@color/Xam"
+            android:background="@drawable/phimchucnang"
             android:layout_height="match_parent"
             android:text="C"/>
 
@@ -122,7 +125,7 @@
             android:layout_height="match_parent"
             android:layout_weight="2"
             android:layout_margin="2dp"
-            android:background="@color/Xam"
+            android:background="@drawable/phimchucnang"
             android:text="⫷"
             android:textSize="20dp" />
 
@@ -139,7 +142,7 @@
             android:onClick="test"
             android:textSize="20dp"
             android:textAllCaps="false"
-            android:background="@color/Xam"
+            android:background="@drawable/phimchucnang"
             android:text="⅟x"/>
 
         <Button
@@ -149,7 +152,7 @@
             android:onClick="test"
             android:textAllCaps="false"
             android:layout_margin="2dp"
-            android:background="@color/Xam"
+            android:background="@drawable/phimchucnang"
             android:layout_height="match_parent"
             android:textSize="20dp" />
         <Button
@@ -158,7 +161,7 @@
             android:textSize="20dp"
             android:layout_margin="2dp"
             android:onClick="test"
-            android:background="@color/Xam"
+            android:background="@drawable/phimchucnang"
             android:textAllCaps="false"
             android:layout_height="match_parent"
             android:text="√x"/>
@@ -167,7 +170,7 @@
             android:layout_weight="2"
             android:textSize="20dp"
             android:layout_margin="2dp"
-            android:background="@color/Xam"
+            android:background="@drawable/phimchucnang"
             android:layout_height="match_parent"
             android:text="/"/>
 
@@ -175,21 +178,22 @@
     <TableRow
         android:weightSum="8"
         android:layout_weight="2">
+
         <Button
             android:id="@+id/btbay"
-            android:layout_weight="2"
-            android:textSize="30dp"
-            android:layout_margin="2dp"
-            android:background="@color/while1"
             android:layout_height="match_parent"
-            android:text="7"/>
+            android:layout_margin="2dp"
+            android:layout_weight="2"
+            android:background="@drawable/test_mau"
+            android:text="7"
+            android:textSize="30dp" />
 
         <Button
             android:id="@+id/bttam"
             android:layout_weight="2"
             android:text="8"
             android:layout_margin="2dp"
-            android:background="@color/while1"
+            android:background="@drawable/test_mau"
             android:layout_height="match_parent"
             android:textSize="30dp" />
         <Button
@@ -197,7 +201,7 @@
             android:layout_weight="2"
             android:textSize="30dp"
             android:layout_margin="2dp"
-            android:background="@color/while1"
+            android:background="@drawable/test_mau"
             android:layout_height="match_parent"
             android:text="9"/>
         <Button
@@ -205,7 +209,7 @@
             android:layout_weight="2"
             android:textSize="20dp"
             android:layout_margin="2dp"
-            android:background="@color/Xam"
+            android:background="@drawable/phimchucnang"
             android:layout_height="match_parent"
             android:text="*"/>
 
@@ -218,7 +222,7 @@
             android:layout_weight="2"
             android:textSize="30dp"
             android:layout_margin="2dp"
-            android:background="@color/while1"
+            android:background="@drawable/test_mau"
             android:layout_height="match_parent"
             android:text="4"/>
 
@@ -227,7 +231,7 @@
             android:layout_weight="2"
             android:text="5"
             android:layout_margin="2dp"
-            android:background="@color/while1"
+            android:background="@drawable/test_mau"
             android:layout_height="match_parent"
             android:textSize="30dp" />
         <Button
@@ -235,7 +239,7 @@
             android:layout_weight="2"
             android:textSize="30dp"
             android:layout_margin="2dp"
-            android:background="@color/while1"
+            android:background="@drawable/test_mau"
             android:layout_height="match_parent"
             android:text="6"/>
         <Button
@@ -244,7 +248,7 @@
             android:layout_margin="2dp"
             android:layout_height="match_parent"
             android:textSize="20dp"
-            android:background="@color/Xam"
+            android:background="@drawable/phimchucnang"
             android:text="-"/>
 
     </TableRow>
@@ -256,7 +260,7 @@
             android:layout_weight="2"
             android:layout_margin="2dp"
             android:textSize="30dp"
-            android:background="@color/while1"
+            android:background="@drawable/test_mau"
             android:layout_height="match_parent"
             android:text="1"/>
 
@@ -265,7 +269,7 @@
             android:layout_weight="2"
             android:text="2"
             android:layout_margin="2dp"
-            android:background="@color/while1"
+            android:background="@drawable/test_mau"
             android:layout_height="match_parent"
             android:textSize="30dp" />
         <Button
@@ -273,7 +277,7 @@
             android:layout_weight="2"
             android:textSize="30dp"
             android:layout_margin="2dp"
-            android:background="@color/while1"
+            android:background="@drawable/test_mau"
             android:layout_height="match_parent"
             android:text="3"/>
         <Button
@@ -282,7 +286,7 @@
             android:layout_margin="2dp"
             android:layout_height="match_parent"
             android:textSize="20dp"
-            android:background="@color/Xam"
+            android:background="@drawable/phimchucnang"
             android:text="+"/>
 
     </TableRow>
@@ -296,7 +300,7 @@
             android:layout_margin="2dp"
             android:onClick="test"
             android:textAllCaps="false"
-            android:background="@color/while1"
+            android:background="@drawable/test_mau"
             android:layout_height="match_parent"
             android:text="+/-"/>
 
@@ -305,7 +309,7 @@
             android:layout_weight="2"
             android:text="0"
             android:layout_margin="2dp"
-            android:background="@color/while1"
+            android:background="@drawable/test_mau"
             android:layout_height="match_parent"
             android:textSize="30dp" />
             <Button
@@ -314,7 +318,7 @@
             android:textSize="30dp"
                 android:layout_margin="2dp"
                 android:onClick="test"
-                android:background="@color/while1"
+                android:background="@drawable/test_mau"
             android:layout_height="match_parent"
             android:text="."/>
         <Button

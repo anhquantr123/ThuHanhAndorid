@@ -109,37 +109,55 @@ public class MainActivity extends AppCompatActivity {
         btn20.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                bieuthuc1= Double.parseDouble(edkq.getText().toString());
-                edbt.setText(edkq.getText().toString()+ " /");
-                nhanphim = 4;
-                edkq.setText("");
+               try {
+                   bieuthuc1= Double.parseDouble(edkq.getText().toString());
+                   edbt.setText(edkq.getText().toString()+ " /");
+                   nhanphim = 4;
+                   edkq.setText("");
+               }catch (Exception et){
+
+               }
+
             }
         });
         btn16.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                bieuthuc1= Double.parseDouble(edkq.getText().toString());
-                edbt.setText(edkq.getText().toString()+ " *");
-                nhanphim = 3;
-                edkq.setText("");
+                try {
+                    bieuthuc1= Double.parseDouble(edkq.getText().toString());
+                    edbt.setText(edkq.getText().toString()+ " *");
+                    nhanphim = 3;
+                    edkq.setText("");
+                }catch (Exception et){
+
+                }
             }
         });
         btn12.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                bieuthuc1= Double.parseDouble(edkq.getText().toString());
-                edbt.setText(edkq.getText().toString()+ " -");
-                nhanphim = 2;
-                edkq.setText("");
+                try {
+                    bieuthuc1= Double.parseDouble(edkq.getText().toString());
+                    edbt.setText(edkq.getText().toString()+ " -");
+                    nhanphim = 2;
+                    edkq.setText("");
+                }catch (Exception et){
+
+                }
+
             }
         });
         btn8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                bieuthuc1= Double.parseDouble(edkq.getText().toString());
-                edbt.setText(edkq.getText().toString()+ " +");
-                nhanphim = 1;
-                edkq.setText("");
+                try {
+                    bieuthuc1= Double.parseDouble(edkq.getText().toString());
+                    edbt.setText(edkq.getText().toString()+ " +");
+                    nhanphim = 1;
+                    edkq.setText("");
+                }catch (Exception et){
+
+                }
             }
         });
         // hang phim khac de tinh toan
@@ -178,49 +196,68 @@ public class MainActivity extends AppCompatActivity {
         btnbang.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                bieuthuc2 = Double.parseDouble(edkq.getText().toString());
-                edbt.setText(edbt.getText().toString()+ edkq.getText().toString());
-                if(nhanphim == 1){
-                    edkq.setText((bieuthuc1+ bieuthuc2)+"");
-                }
-                if(nhanphim == 2){
-                    edkq.setText((bieuthuc1- bieuthuc2)+"");
-                }
-                if(nhanphim == 3){
-                    edkq.setText((bieuthuc1* bieuthuc2)+"");
-                }
-                if(nhanphim == 4){
-                    edkq.setText((bieuthuc1/ bieuthuc2)+"");
-                }
+               try {
+                   bieuthuc2 = Double.parseDouble(edkq.getText().toString());
+                   edbt.setText(edbt.getText().toString()+ edkq.getText().toString());
+                   if(nhanphim == 1){
+                       edkq.setText((bieuthuc1+ bieuthuc2)+"");
+                   }
+                   if(nhanphim == 2){
+                       edkq.setText((bieuthuc1- bieuthuc2)+"");
+                   }
+                   if(nhanphim == 3){
+                       edkq.setText((bieuthuc1* bieuthuc2)+"");
+                   }
+                   if(nhanphim == 4){
+                       if(bieuthuc2 == 0){
+                           Toast.makeText(MainActivity.this, "Biểu thức bạn nhập là 0 không thể thực hiện", Toast.LENGTH_SHORT).show();
+                       }else {
+                           edkq.setText((double) Math.round((bieuthuc1 / bieuthuc2) * 100000) / 100000 + "");
+                       }
+                   }
+               }catch (Exception dd){
+
+               }
             }
         });
 
     }
     public void test(View view){
-        switch (view.getId()){
-            case R.id.btcham:
-                edkq.setText(edkq.getText()+".");
-                break;
-            case R.id.btamduong:
-                edkq.setText(edkq.getText()+"-");
-                break;
-            case R.id.btxbinh:
-                double kq = Double.parseDouble(edkq.getText().toString());
-                edkq.setText(kq*kq+"");
-                edbt.setText(kq+"²");
-                break;
-            case R.id.xcanhai:
-                double kq1 = Double.parseDouble(edkq.getText().toString());
-                edbt.setText("√"+kq1);
-                edkq.setText(Math.sqrt(kq1)+"");
-                break;
-            case R.id.btonechiaX:
-                double kq2 = Double.parseDouble(edkq.getText().toString());
-                edbt.setText("1/"+kq2);
-                edkq.setText(1/kq2+"");
-                break;
+        try {
+            switch (view.getId()){
+                case R.id.btcham:
+                    edkq.setText(edkq.getText()+".");
+                    break;
+                case R.id.btamduong:
+                    edkq.setText(edkq.getText()+"-");
+                    break;
+                case R.id.btxbinh:
+                    double kq = Double.parseDouble(edkq.getText().toString());
+                    edkq.setText(kq*kq+"");
+                    //edbt.setText(edbt.getText()+""+kq+"²");
+                    break;
+                case R.id.xcanhai:
+                    double kq1 = Double.parseDouble(edkq.getText().toString());
+                    //edbt.setText(edbt.getText()+"√"+kq1);
+                    edkq.setText((double)Math.round(Math.sqrt(kq1)*100000)/100000+"");
+                    break;
+                case R.id.btonechiaX:
+                    double kq2 = Double.parseDouble(edkq.getText().toString());
+                    //edbt.setText(edbt.getText()+"1/"+kq2);
+                    edkq.setText((double) Math.round((1/kq2)*100000)/100000+"");
+                    break;
+                case R.id.btphantram:
+                    double kq3 = Double.parseDouble(edkq.getText().toString())/100;
+                    edkq.setText((double)Math.round(kq3*100000)/100000+"");
+                    break;
+                case R.id.btce:
+                    edkq.setText("");
+
+            }
+        }catch (Exception ed){
 
         }
+
     }
 
 }
