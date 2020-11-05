@@ -115,6 +115,7 @@ public class MainActivity extends AppCompatActivity {
                    nhanphim = 4;
                    edkq.setText("");
                }catch (Exception et){
+                   Toast.makeText(MainActivity.this, "Lỗi Xảy Ra", Toast.LENGTH_SHORT).show();
 
                }
 
@@ -129,6 +130,7 @@ public class MainActivity extends AppCompatActivity {
                     nhanphim = 3;
                     edkq.setText("");
                 }catch (Exception et){
+                    Toast.makeText(MainActivity.this, "Lỗi Xảy Ra", Toast.LENGTH_SHORT).show();
 
                 }
             }
@@ -142,7 +144,7 @@ public class MainActivity extends AppCompatActivity {
                     nhanphim = 2;
                     edkq.setText("");
                 }catch (Exception et){
-
+                    Toast.makeText(MainActivity.this, "Lỗi Xảy Ra", Toast.LENGTH_SHORT).show();
                 }
 
             }
@@ -156,7 +158,7 @@ public class MainActivity extends AppCompatActivity {
                     nhanphim = 1;
                     edkq.setText("");
                 }catch (Exception et){
-
+                    Toast.makeText(MainActivity.this, "Lỗi Xảy Ra", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -216,7 +218,7 @@ public class MainActivity extends AppCompatActivity {
                        }
                    }
                }catch (Exception dd){
-
+                   Toast.makeText(MainActivity.this, "Lỗi Xảy Ra", Toast.LENGTH_SHORT).show();
                }
             }
         });
@@ -255,7 +257,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         }catch (Exception ed){
-
+            Toast.makeText(this, "Lỗi Xảy Ra", Toast.LENGTH_SHORT).show();
         }
 
     }
